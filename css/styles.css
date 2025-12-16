@@ -21,6 +21,11 @@
   text-shadow: 0 0 5px #FFD700; 
 }
 
+.hero {
+    background-image: url('images/hero.jpg');
+    min-height: 500px;
+}
+
 
  
 
