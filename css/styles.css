@@ -109,7 +109,11 @@ body {
   text-align: left;
   font-size: x-large;
   padding: 1rem;
-  color: maroon;
+  color: white;
+}
+
+.item2 {
+  display: flex;
 }
 
 
