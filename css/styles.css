@@ -1,3 +1,7 @@
+body {
+  background-color: #006B3C;
+}
+
 .nav-menu {
   background-color: #BF0A30; /* Christmas Red */
   border: 2px solid #006B3C; /* Christmas Green */
@@ -23,10 +27,132 @@
 
 .hero { 
   position: relative;
-  background-image: url('../images/hero.jpg');
+  height: 100vh;
+  background-image: url('../images/hero1.jpg');
   min-height: 800px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #BF0A30;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  width: 90%;
+  max-width: 800px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.card {
+   background-color: red;
+   border-radius: 10px;
+   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+   overflow: hidden;
+    Transition: all 0.3s ease;
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+    
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+   padding: 1.5rem;
+    
+}
+
+.card-content h3 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.item {
+  display: flex;
+  padding: 1rem;
+}
+
+.item-content {
+  text-align: left;
+  font-size: x-large;
+  padding: 1rem;
+  color: maroon;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    
+    /* TODO: Change cards grid to 2 columns */
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* TODO: Change footer grid to 2 columns */
+    .footer-grid {
+        
+    }
+ grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+}
+
+/* ========== DESKTOP (1024px and up) ========== */
+@media screen and (min-width: 1024px) {
+    
+    /* TODO: Change cards grid to 3 columns */
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* TODO: Change footer grid to 4 columns */
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* TODO: Increase hero heading size */
+    .hero-content h1 {
+        font-size: 4rem;
+       
+    }
+
+
 
 
  
